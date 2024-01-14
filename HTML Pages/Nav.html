@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap"
+    rel="stylesheet">
+    <style>
+      .nav-header-top{
+        height: 80px;
+        background-color: hsl(217, 100%, 12%);
+       color:  hsl(0, 0%, 97%);
+      }
+      .nav-logo{
+        /* margin-left: -150px; */
+        color: var(--oxford-blue-1);
+  font-family: var(--ff-poppins);
+  font-size: 30px;
+  font-weight: var(--fw-800);
+      }
+      .main-navbar-link{
+        margin:20px;
+        font-size: 15px;
+      }
+      .main-navbar-list{
+        display: flex;
+        margin-left: 100px;
+        font-weight: bold;
+        color: hsl(218, 70%, 18%);
+      }
+      .book-btn{
+        /* margin-left: 90px; */
+        width: 800px;
+        background-image: linear-gradient( var(--deg, 90deg), var(--carolina-blue) 0%, var(--royal-blue-light) 100%);
+  color: var(--white);
+  font-size: var(--fs-8);
+  text-transform: uppercase;
+  padding: 20px 30px;
+  text-align: center;
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-4);
+      }
+      .header-bottom{
+        margin-top: 10px;
+      }
+    </style>
+</head>
+<body id="top">
+     <header class="nav-header">
+
+    <div class="nav-header-top">
+      <div class="nav-container">
+        <ul class="nav-contact-list" style="display: flex; margin-left: 100px;">
+
+          <li class="nav-contact-item" style="margin: 30px;">
+            
+            <nav-ion-icon name="mail-outline"></nav-ion-icon>
+
+            <a href="mailto:info@example.com" class="nav-contact-link">info@example.com</a>
+          </li>
+
+          <li class="nav-contact-item" style="margin: 30px;">
+            <nav-ion-icon name="call-outline"></nav-ion-icon>
+
+            <a href="tel:+917052101786" class="nav-contact-link">+91-9876-596-234</a>
+          </li>
+
+        </ul>
+
+         </div>
+    </div>
+
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="#" class="nav-logo">
+            <img src="smileworkslogo.png" alt="Logo" width="60" height="45" class="d-inline-block align-text-top ">
+            SmileWorksDental.</a>
+
+        <nav class="main-navbar container" data-navbar>
+          <ul class="main-navbar-list" >
+
+            <li>
+              <a href="#home" class="main-navbar-link"  data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#service" class="main-navbar-link"  data-nav-link>Services</a>
+              
+            </li>
+            
+
+            <li>
+              <a href="#about" class="main-navbar-link" data-nav-link>AboutUs</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="main-navbar-link"  data-nav-link>Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="main-navbar-link"  data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <a href="#" class="book-btn">Book appointment</a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <nav-ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></nav-ion-icon>
+          <nav-ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></nav-ion-icon>
+        </button>
+
+      </div>
+    </div>
+
+  </header>
+
+</div>
+
+</body>
+</html>
