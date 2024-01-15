@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Appointment Booking</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body{
+        background-image: url(imgs/hero-bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* Additional styles for smaller form elements */
+    #appointmentForm {
+        background-color: white;
+        padding: 10px;
+      max-width: 400px; /* Set maximum width for the form */
+      margin: auto; /* Center the form */
+    }
+
+    .form-group {
+      margin-bottom: 15px; /* Adjust margin between form groups */
+    }
+
+    .btn-primary {
+      padding: 10px 20px; /* Adjust padding for the Submit button */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-2">
+
+    <!-- Landing Page Content -->
+
+    <div id="appointmentForm">
+      <h3 class="mb-1" style="font-size: 25px; color: hsl(201, 92%, 47%)  ;">Book an Appointment</h3>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" class="form-control" id="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date:</label>
+          <input type="date" class="form-control" id="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Preferred Time:</label>
+          <input type="time" class="form-control" id="time" required>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+      </form>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="confirmationContent">
+            <!-- Confirmation content will be displayed here -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+    function submitForm() {
+      // Get form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+  
+      // Create JSON object
+      const formData = {
+        name: name,
+        email: email,
+        phone: phone,
+        date: date,
+        time: time
+      };
+  
+      // Display confirmation on display
+      const confirmationContent = document.getElementById('confirmationContent');
+      confirmationContent.innerHTML = `
+        <p>Name: ${formData.name}</p>
+        <p>Email: ${formData.email}</p>
+        <p>Phone: ${formData.phone}</p>
+        <p>Date: ${formData.date}</p>
+        <p>Time: ${formData.time}</p>
+      `;
+  
+      // Convert JSON object to JSON string for further processing
+      const formDataJsonString = JSON.stringify(formData);
+      console.log(formDataJsonString); // You can use this string for sending data to a server
+  
+      // Show confirmation modal
+      $('#confirmationModal').modal('show');
+    }
+  </script>
+
+</body>
+</html>
