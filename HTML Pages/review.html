@@ -9,6 +9,28 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/CSS/style.css">
+    <style>
+      .stars {
+            display: flex;
+            flex-direction: row-reverse;
+            cursor: pointer;
+            
+
+        }
+
+        .star {
+          display: inline-block;
+            font-size: 2em;
+            padding: 0.1em;
+           transition: color 0.5s;
+            
+        }
+
+        .star:hover,
+        .star.active {
+            color: gold;
+        }
+    </style>
   </head>
 
 <body>
@@ -103,13 +125,17 @@
         </div>
         <h3 class="h3">
           <a href="#" class="card-title">Maria Smantha</a>
-        </h3>
+        </h3> 
+
         <h6 class="text-primary mb-3">(An expat living in Defence Colony, New Delhi)</h6>
-        <span class="rating-star" onclick="setRating(1)">★</span>
-        <span class="rating-star" onclick="setRating(2)">★</span>
-        <span class="rating-star" onclick="setRating(3)">★</span>
-        <span class="rating-star" onclick="setRating(4)">★</span>
-        <span class="rating-star" onclick="setRating(5)">★</span>
+        
+          <span  class="star" data-value="1" onclick="handleRating(event)" >★</span>
+          <span class="star" data-value="2" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="3" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="4" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="5" onclick="handleRating(event)">★</span>
+          
+      
         <p class="px-xl-3">
           <!-- <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur -->
           <!-- adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic -->
@@ -143,11 +169,13 @@
           <a href="#" class="card-title">Lisa Cudrow</a>
         </h3>
         <h6 class="text-primary mb-3">(A resident of South Delhi)</h6>
-        <span class="rating-star" onclick="setRating(1)">★</span>
-        <span class="rating-star" onclick="setRating(2)">★</span>
-        <span class="rating-star" onclick="setRating(3)">★</span>
-        <span class="rating-star" onclick="setRating(4)">★</span>
-        <span class="rating-star" onclick="setRating(5)">★</span>
+        <span  class="star" data-value="1" onclick="handleRating(event)" >★</span>
+          <span class="star" data-value="2" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="3" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="4" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="5" onclick="handleRating(event)">★</span>
+          
+       
         <p class="px-xl-3">
           <!-- <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum -->
           <!-- exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi. -->
@@ -181,12 +209,13 @@
           <a href="#" class="card-title">John Smith</a>
         </h3>
         <h6 class="text-primary mb-3">(A resident of Kalkaji, New Delhi)</h6>
-        <span class="rating-star" onclick="setRating(1)">★</span>
-        <span class="rating-star" onclick="setRating(2)">★</span>
-        <span class="rating-star" onclick="setRating(3)">★</span>
-        <span class="rating-star" onclick="setRating(4)">★</span>
-        <span class="rating-star" onclick="setRating(5)">★</span>
-
+        <span  class="star" data-value="1" onclick="handleRating(event)" >★</span>
+          <span class="star" data-value="2" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="3" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="4" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="5" onclick="handleRating(event)">★</span>
+          
+        
 
         <p class="px-xl-3">
           <!-- <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio -->
