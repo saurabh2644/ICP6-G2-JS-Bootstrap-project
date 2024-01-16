@@ -9,6 +9,28 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/CSS/style.css">
+    <style>
+      .stars {
+            display: flex;
+            flex-direction: row-reverse;
+            cursor: pointer;
+            
+
+        }
+
+        .star {
+          display: inline-block;
+            font-size: 2em;
+            padding: 0.1em;
+           transition: color 0.5s;
+            
+        }
+
+        .star:hover,
+        .star.active {
+            color: gold;
+        }
+    </style>
   </head>
 
 <body>
@@ -48,31 +70,31 @@
           <ul class="main-navbar-list" >
 
             <li>
-              <a href="#home" class="main-navbar-link"  data-nav-link>Home</a>
+              <a href="/index.html" class="main-navbar-link"  data-nav-link>Home</a>
             </li>
 
             <li>
-              <a href="#service" class="main-navbar-link"  data-nav-link>Services</a>
+              <a href="/HTML Pages/services.html" class="main-navbar-link"  data-nav-link>Services</a>
               
             </li>
             
 
             <li>
-              <a href="#about" class="main-navbar-link" data-nav-link>AboutUs</a>
+              <a href="/index.html" class="main-navbar-link" data-nav-link>AboutUs</a>
             </li>
 
             <li>
-              <a href="#blog" class="main-navbar-link"  data-nav-link>Blog</a>
+              <a href="/HTML Pages/review.html" class="main-navbar-link"  data-nav-link>Reviews</a>
             </li>
 
             <li>
-              <a href="#" class="main-navbar-link"  data-nav-link>Contact</a>
+              <a href="/HTML Pages/contact.html" class="main-navbar-link"  data-nav-link>Contact</a>
             </li>
 
           </ul>
         </nav>
 
-        <a href="#" class="book-btn">Book appointment</a>
+        <a href="/HTML Pages/appoinment.html" class="book-btn">Book appointment</a>
 
         <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
           <nav-ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></nav-ion-icon>
@@ -103,13 +125,17 @@
         </div>
         <h3 class="h3">
           <a href="#" class="card-title">Maria Smantha</a>
-        </h3>
+        </h3> 
+
         <h6 class="text-primary mb-3">(An expat living in Defence Colony, New Delhi)</h6>
-        <span class="rating-star" onclick="setRating(1)">★</span>
-        <span class="rating-star" onclick="setRating(2)">★</span>
-        <span class="rating-star" onclick="setRating(3)">★</span>
-        <span class="rating-star" onclick="setRating(4)">★</span>
-        <span class="rating-star" onclick="setRating(5)">★</span>
+        
+          <span  class="star" data-value="1" onclick="handleRating(event)" >★</span>
+          <span class="star" data-value="2" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="3" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="4" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="5" onclick="handleRating(event)">★</span>
+          
+      
         <p class="px-xl-3">
           <!-- <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur -->
           <!-- adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic -->
@@ -143,11 +169,13 @@
           <a href="#" class="card-title">Lisa Cudrow</a>
         </h3>
         <h6 class="text-primary mb-3">(A resident of South Delhi)</h6>
-        <span class="rating-star" onclick="setRating(1)">★</span>
-        <span class="rating-star" onclick="setRating(2)">★</span>
-        <span class="rating-star" onclick="setRating(3)">★</span>
-        <span class="rating-star" onclick="setRating(4)">★</span>
-        <span class="rating-star" onclick="setRating(5)">★</span>
+        <span  class="star" data-value="1" onclick="handleRating(event)" >★</span>
+          <span class="star" data-value="2" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="3" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="4" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="5" onclick="handleRating(event)">★</span>
+          
+       
         <p class="px-xl-3">
           <!-- <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum -->
           <!-- exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi. -->
@@ -181,12 +209,13 @@
           <a href="#" class="card-title">John Smith</a>
         </h3>
         <h6 class="text-primary mb-3">(A resident of Kalkaji, New Delhi)</h6>
-        <span class="rating-star" onclick="setRating(1)">★</span>
-        <span class="rating-star" onclick="setRating(2)">★</span>
-        <span class="rating-star" onclick="setRating(3)">★</span>
-        <span class="rating-star" onclick="setRating(4)">★</span>
-        <span class="rating-star" onclick="setRating(5)">★</span>
-
+        <span  class="star" data-value="1" onclick="handleRating(event)" >★</span>
+          <span class="star" data-value="2" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="3" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="4" onclick="handleRating(event)">★</span>
+          <span class="star" data-value="5" onclick="handleRating(event)">★</span>
+          
+        
 
         <p class="px-xl-3">
           <!-- <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio -->
@@ -257,38 +286,31 @@
         </li>
 
         <li>
-          <a href="#" class="footer-link">
+          <a href="/index.html" class="footer-link">
             <span class="span">Home</span>
           </a>
         </li>
 
         <li>
-          <a href="#" class="footer-link">
+          <a href="#about" class="footer-link">
             <span class="span">About Us</span>
           </a>
         </li>
 
         <li>
-          <a href="#" class="footer-link">
+          <a href="/HTML Pages/services.html" class="footer-link">
             <span class="span">Services</span>
           </a>
         </li>
 
 
-
         <li>
-          <a href="#" class="footer-link">
-            <span class="span">Our Team</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">
+          <a href="/HTML Pages/contact.html" class="footer-link">
             <span class="span">Contact US</span>
           </a>
         </li>
         <li>
-          <a href="#" class="footer-link">
+          <a href="/HTML Pages/review.html" class="footer-link">
             <span class="span">Patient Reviews</span>
           </a>
         </li>
@@ -303,37 +325,37 @@
         </li>
 
         <li>
-          <a href="#" class="footer-link">
+          <a href="/HTML Pages/services.html" class="footer-link">
             <span class="span">Root Canal</span>
           </a>
         </li>
 
         <li>
-          <a href="#" class="footer-link">
+          <a href="/HTML Pages/services.html" class="footer-link">
             <span class="span">Alignment Teeth</span>
           </a>
         </li>
 
         <li>
-          <a href="#" class="footer-link">
+          <a href="/HTML Pages/services.html" class="footer-link">
             <span class="span">Cosmetic Teeth</span>
           </a>
         </li>
 
         <li>
-          <a href="#" class="footer-link">
+          <a href="/HTML Pages/services.html" class="footer-link">
             <span class="span">Oral Hygiene</span>
           </a>
         </li>
 
         <li>
-          <a href="#" class="footer-link">
+          <a href="/HTML Pages/services.html" class="footer-link">
             <span class="span">Live Advisory</span>
           </a>
         </li>
 
         <li>
-          <a href="#" class="footer-link">
+          <a href="/HTML Pages/services.html" class="footer-link">
             <span class="span">Cavity Inspection</span>
           </a>
         </li>
@@ -362,15 +384,15 @@
             <ion-icon name="call-outline"></ion-icon>
           </div>
 
-          <a href="tel:+919876596234" class="footer-link">+91-9876-596-234</a>
+          <a href="tel:+919876596234" class="footer-link"> 📞+91-9876-596-234</a>
         </li>
 
         <li class="footer-item">
-          <div class="item-icon">
+          <div class="item-icon"> 
             <ion-icon name="mail-outline"></ion-icon>
           </div>
 
-          <a href="mailto:help@example.com" class="footer-link">smileworksdental@gmail.com</a>
+          <a href="mailto:help@example.com" class="footer-link"> 📧smileworksdental@gmail.com</a>
         </li>
 
       </ul>
