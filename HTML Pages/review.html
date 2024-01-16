@@ -7,17 +7,90 @@
   <title>reviews page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
+
+    <link rel="stylesheet" href="/CSS/style.css">
+  </head>
 
 <body>
-  <section>
+   <!-- nav -->
+   <header class="nav-header">
+
+    <div class="nav-header-top">
+      <div class="nav-container">
+        <ul class="nav-contact-list" style="display: flex; margin-left: 100px;">
+
+          <li class="nav-contact-item" style="margin: 30px;">
+            
+            <ion-icon name="mail-outline"></ion-icon>
+
+            <a href="mailto:info@example.com" class="nav-contact-link">info@example.com</a>
+          </li>
+
+          <li class="nav-contact-item" style="margin: 30px;">
+            <nav-ion-icon name="call-outline"></nav-ion-icon>
+
+            <a href="tel:+917052101786" class="nav-contact-link">+91-9876-596-234</a>
+          </li>
+
+        </ul>
+
+         </div>
+    </div>
+
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="#" class="nav-logo">
+            <img src="/Images/smileworkslogo.png" alt="Logo" width="60" height="45" class="d-inline-block align-text-top ">
+            SmileWorksDental.</a>
+
+        <nav class="main-navbar container" data-navbar>
+          <ul class="main-navbar-list" >
+
+            <li>
+              <a href="#home" class="main-navbar-link"  data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#service" class="main-navbar-link"  data-nav-link>Services</a>
+              
+            </li>
+            
+
+            <li>
+              <a href="#about" class="main-navbar-link" data-nav-link>AboutUs</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="main-navbar-link"  data-nav-link>Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="main-navbar-link"  data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <a href="#" class="book-btn">Book appointment</a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <nav-ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></nav-ion-icon>
+          <nav-ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></nav-ion-icon>
+        </button>
+
+      </div>
+    </div>
+
+  </header>
+
+</div>
+
+  <section style="margin-top: 150px;">
     <div class="row d-flex justify-content-center">
       <div class="col-md-10 col-xl-8 text-center">
-        <h3 class="mb-4">Patient Reviews</h3>
-        <!-- <p class="mb-4 pb-2 mb-md-5 pb-md-0"> -->
-        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet -->
-        <!-- numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum -->
-        <!-- quisquam eum porro a pariatur veniam. -->
+        <h2 class="h2 section-title text-center">Patient Reviews</h2>
+       
         </p>
       </div>
     </div>
@@ -28,7 +101,9 @@
           <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" class="rounded-circle shadow-1-strong"
             width="150" height="150" />
         </div>
-        <h5 class="mb-3">Maria Smantha</h5>
+        <h3 class="h3">
+          <a href="#" class="card-title">Maria Smantha</a>
+        </h3>
         <h6 class="text-primary mb-3">(An expat living in Defence Colony, New Delhi)</h6>
         <span class="rating-star" onclick="setRating(1)">★</span>
         <span class="rating-star" onclick="setRating(2)">★</span>
@@ -64,7 +139,9 @@
           <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp" class="rounded-circle shadow-1-strong"
             width="150" height="150" />
         </div>
-        <h5 class="mb-3">Lisa Cudrow</h5>
+        <h3 class="h3">
+          <a href="#" class="card-title">Lisa Cudrow</a>
+        </h3>
         <h6 class="text-primary mb-3">(A resident of South Delhi)</h6>
         <span class="rating-star" onclick="setRating(1)">★</span>
         <span class="rating-star" onclick="setRating(2)">★</span>
@@ -100,7 +177,9 @@
           <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" class="rounded-circle shadow-1-strong"
             width="150" height="150" />
         </div>
-        <h5 class="mb-3">John Smith</h5>
+        <h3 class="h3">
+          <a href="#" class="card-title">John Smith</a>
+        </h3>
         <h6 class="text-primary mb-3">(A resident of Kalkaji, New Delhi)</h6>
         <span class="rating-star" onclick="setRating(1)">★</span>
         <span class="rating-star" onclick="setRating(2)">★</span>
@@ -143,7 +222,194 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
+ <!-- footer -->
+ <footer class="footer">
 
+  <div class="footer-top section">
+    <div class="container">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">SmileWorks Dental</a>
+
+        <p class="footer-text">
+          At Orthodontic Specialists, we’ve made orthodontic care personal and affordable, by handling all of our
+          financing in-house. Learn how treatment can be less expensive than you think at your free consultation.
+        </p>
+
+        <div class="schedule">
+          <div class="schedule-icon">
+            <ion-icon name="time-outline"></ion-icon>
+          </div>
+
+          <span class="span">
+            Monday - Saturday:<br>
+            9:00am - 10:00Pm
+          </span>
+        </div>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Links</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">About Us</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Services</span>
+          </a>
+        </li>
+
+
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Our Team</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Contact US</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Patient Reviews</span>
+          </a>
+        </li>
+       
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Our Services</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Root Canal</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Alignment Teeth</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Cosmetic Teeth</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Oral Hygiene</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Live Advisory</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">
+            <span class="span">Cavity Inspection</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Contact Us</p>
+        </li>
+
+        <li class="footer-item">
+          <div class="item-icon">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
+
+          <address class="item-text">
+            1247/Plot No. 39, 15th Phase,<br>
+            LHB Colony, Pune ,Maharashtra 
+          </address>
+        </li>
+
+        <li class="footer-item">
+          <div class="item-icon">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+
+          <a href="tel:+919876596234" class="footer-link">+91-9876-596-234</a>
+        </li>
+
+        <li class="footer-item">
+          <div class="item-icon">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+
+          <a href="mailto:help@example.com" class="footer-link">smileworksdental@gmail.com</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+
+      <p class="copyright">
+         All Rights Reserved by SmileWorks Dental 2024 ©️</p>
+
+      <ul class="social-list">
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+
+</footer>
 
 
 </body>
