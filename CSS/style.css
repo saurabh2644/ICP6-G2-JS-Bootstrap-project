@@ -1170,57 +1170,6 @@
     .cta-banner { margin-block-start: -120px; }
   
   }
-
-  /* form css */
-  
-/* *::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-a {
-    text-decoration: none;
-    color: var(--light-color);
-}
-header {
-    height: 100vh;
-   background-image: url(/img/HallBooking-imgs/bg-reserve.jpg);
-    background-size: cover;
-    
-}
-
-input, textarea, select {
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 60%;
-    border-color: skyblue;
-    padding: 0.4rem;
-    border-style: none;
-
-    
-}
-.header-form{
-    margin: auto;
-}
-.head-section-title{
-    padding-top: 30px;
-	color:white;
-	font-size: 40px;
-	text-align: center;
-}
-
-
-main {
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 20px;
-}
- */
-
-
 .booking-form {
     max-width: 600px;
     border: 1px solid;
@@ -1270,4 +1219,42 @@ input, select, button {
     .header-form {
         margin-left: 0;
     }
+}
+/* navbar css */
+.nav-header-top{
+  height: 80px;
+  background-color: hsl(217, 100%, 12%);
+ color:  hsl(0, 0%, 97%);
+}
+.nav-logo{
+  /* margin-left: -150px; */
+  color: var(--oxford-blue-1);
+font-family: var(--ff-poppins);
+font-size: 30px;
+font-weight: var(--fw-800);
+}
+.main-navbar-link{
+  margin:20px;
+  font-size: 15px;
+}
+.main-navbar-list{
+  display: flex;
+  margin-left: 100px;
+  font-weight: bold;
+  color: hsl(218, 70%, 18%);
+}
+.book-btn{
+  /* margin-left: 90px; */
+  width: 800px;
+  background-image: linear-gradient( var(--deg, 90deg), var(--carolina-blue) 0%, var(--royal-blue-light) 100%);
+color: var(--white);
+font-size: var(--fs-8);
+text-transform: uppercase;
+padding: 20px 30px;
+text-align: center;
+border-radius: var(--radius-4);
+box-shadow: var(--shadow-4);
+}
+.header-bottom{
+  margin-top: 10px;
 }
